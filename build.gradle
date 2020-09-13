@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        maven{
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath  "io.franzbecker:gradle-lombok:1.14"
+        classpath  "io.qameta.allure:allure-gradle:2.5"
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'io.franzbecker.gradle-lombok'
+    apply plugin: 'io.qameta.allure'
+
+    repositories {
+        jcenter()
+    }
+}
+
+
+//test {
+//    useJUnitPlatform {
+//        excludeTags 'integration'
+//    }
+//}
+//
+//allure {
+//    version = '2.5.0'
+//    aspectjweaver = true
+//    autoconfigure = true
+//    configuration = 'compile'  // указывает чтоб аллюр отрабатывал на уровне всего проекта
+//    useJUnit5{
+//        version = '2.10.0'
+//    }
+//}
