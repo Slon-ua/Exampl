@@ -29,7 +29,7 @@ node {
 //            }
         git branch: 'master',
         credentials: '',
-        url: 'https://github.com/Slon-ua/SomethingNew.git'
+        url: 'https://github.com/Slon-ua/Exampl.git'
     }
     stage("build"){
 //        steps {
