@@ -24,30 +24,30 @@ node {
     }    
 
     stage("checkout repo"){
-//        steps {
-                sh "curl -s -X POST https://api.telegram.org/bot342643054:AAEANh8JIpn1Oq4csQi9-HHnSUmy5HYFjU8/sendMessage -d chat_id=221338397 -d text='Start AUTest.'"
-//            }
+        
+             sh "curl -s -X POST https://api.telegram.org/bot342643054:AAEANh8JIpn1Oq4csQi9-HHnSUmy5HYFjU8/sendMessage -d chat_id=221338397 -d text='Start AUTest.'"
+
         git branch: 'master',
         credentials: '',
         url: 'https://github.com/Slon-ua/Exampl.git'
     }
     stage("build"){
-//        steps {
-                sh "curl -s -X POST https://api.telegram.org/bot342643054:AAEANh8JIpn1Oq4csQi9-HHnSUmy5HYFjU8/sendMessage -d chat_id=221338397 -d text='Build AUProject.'"
-//            }
-        sh "./gradlew clean API:assemble "
+
+             sh "curl -s -X POST https://api.telegram.org/bot342643054:AAEANh8JIpn1Oq4csQi9-HHnSUmy5HYFjU8/sendMessage -d chat_id=221338397 -d text='Build AUProject.'"
+
+            sh "./gradlew clean API:assemble "
     }
 //    try {
         stage("run API test"){
-//          steps {
-              sh "curl -s -X POST https://api.telegram.org/bot342643054:AAEANh8JIpn1Oq4csQi9-HHnSUmy5HYFjU8/sendMessage -d chat_id=221338397 -d text='Run API test.'"
-//          }
+
+             sh "curl -s -X POST https://api.telegram.org/bot342643054:AAEANh8JIpn1Oq4csQi9-HHnSUmy5HYFjU8/sendMessage -d chat_id=221338397 -d text='Run API test.'"
+
             sh "./gradlew  API:test" 
         }
         stage("run UI test"){
-//          steps {
+
              sh "curl -s -X POST https://api.telegram.org/bot342643054:AAEANh8JIpn1Oq4csQi9-HHnSUmy5HYFjU8/sendMessage -d chat_id=221338397 -d text='Run UI test.'"
-//          }
+
             sh "./gradlew  UI:test"
         }
     //}
@@ -64,8 +64,8 @@ node {
                 results: [[path: 'API/build/allure-results'],[path: 'UI/build/allure-results']]
             ])
         }
-//        steps {
-                sh "curl -s -X POST https://api.telegram.org/bot342643054:AAEANh8JIpn1Oq4csQi9-HHnSUmy5HYFjU8/sendMessage -d chat_id=221338397 -d text='Test complete.\n\n\n .'"
-//        }
+
+        sh "curl -s -X POST https://api.telegram.org/bot342643054:AAEANh8JIpn1Oq4csQi9-HHnSUmy5HYFjU8/sendMessage -d chat_id=221338397 -d text='Test complete.\n\n\n .'"
+
     }
 }
