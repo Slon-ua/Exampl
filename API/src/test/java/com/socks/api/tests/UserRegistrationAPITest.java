@@ -33,12 +33,12 @@ public class UserRegistrationAPITest extends BaseAPITest {
             .username("USER-" + RandomStringUtils.randomNumeric(5))
             .password("12345")
             .email("usik@test.com");
-
+/*
     @Test
     @Tag("Prod")
     @Description ("test_Can_Register_New_User_With_Valid_Credentials")
     void testCanRegisterNewUserWithValidCredentials() {
-
+*/
        /*
         UserPayload userPayload = new UserPayload();
         userPayload.setUsername("USER-"+RandomStringUtils.randomNumeric(5));
@@ -63,7 +63,7 @@ public class UserRegistrationAPITest extends BaseAPITest {
                 .body("id", not(isEmptyString()))
                 .statusCode(200);
        */
-
+/*
         //expect
         UserRegistrationResponce pojo = userApiService.registerNewUser(userPayload)
                 .shouldHave(Conditions.statusCode(200))
