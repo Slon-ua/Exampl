@@ -42,7 +42,7 @@ node {
 //          steps {
               sh "curl -s -X POST https://api.telegram.org/bot342643054:AAEANh8JIpn1Oq4csQi9-HHnSUmy5HYFjU8/sendMessage -d chat_id=221338397 -d text='Run API test.'"
 //          }
-            sh "./gradlew  API:test" 
+//            sh "./gradlew  API:test" 
         }
         stage("run UI test"){
 //          steps {
