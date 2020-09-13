@@ -15,7 +15,7 @@ import static org.hamcrest.text.IsEmptyString.isEmptyString;
 public class CartApiAPITest extends BaseAPITest {
 
     private final CartApiService cartApiService = new CartApiService();
-
+/*
     @Test
     @Tag("DEV")
     @Jira("Jira-3437")
@@ -35,4 +35,5 @@ public class CartApiAPITest extends BaseAPITest {
 //                .assertThat()
 //                .statusCode(200);
     }
+    */
 }
