@@ -1,39 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Slon-ua 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-Slon-ua
-/
-SomethingNew
-1
-00
-Code
-Issues
-Pull requests
-1
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-SomethingNew/Jenkinsfile1
-@Slon-ua
-Slon-ua Update Jenkinsfile1
-Latest commit 17bbd08 13 hours ago
- History
- 1 contributor
-69 lines (67 sloc)  2.91 KB
-  
 node {
 //
     environment {
@@ -103,15 +67,3 @@ node {
 //        }
     }
 }
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
