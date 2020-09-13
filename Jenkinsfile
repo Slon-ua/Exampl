@@ -56,18 +56,18 @@ node {
 //        currentBuild.result = 'FAILURE'
 //        throw error
 //    } 
-    finally {
-        stage('Reports') {
-            allure([
-                includeProperties: false,
-                jdk: '',
-                properties: [],
-                reportBuildPolicy: 'ALWAYS',
-                results: [[path: 'API/build/allure-results'],[path: 'UI/build/allure-results']]
-            ])
-        }
-
-        sh "curl -s -X POST https://api.telegram.org/bot342643054:AAEANh8JIpn1Oq4csQi9-HHnSUmy5HYFjU8/sendMessage -d chat_id=221338397 -d text='Test complete.\n\n\n .'"
-
-    }
+//    finally {
+//        stage('Reports') {
+//            allure([
+//                includeProperties: false,
+//                jdk: '',
+//                properties: [],
+//                reportBuildPolicy: 'ALWAYS',
+//                results: [[path: 'API/build/allure-results'],[path: 'UI/build/allure-results']]
+//            ])
+//        }
+//
+  //      sh "curl -s -X POST https://api.telegram.org/bot342643054:AAEANh8JIpn1Oq4csQi9-HHnSUmy5HYFjU8/sendMessage -d chat_id=221338397 -d text='Test complete.\n\n\n .'"
+//
+ //   }
 }
