@@ -16,7 +16,7 @@ import static org.hamcrest.text.IsEmptyString.isEmptyString;
 public class CustomersAPITest extends BaseAPITest {
 
     private final CustomersApiService customersApiService = new CustomersApiService();
-
+/*
 //    @BeforeAll
 //    static void setUp(){
 //        RestAssured.baseURI="http://192.168.99.101";
@@ -40,7 +40,7 @@ public class CustomersAPITest extends BaseAPITest {
                         .filters(new RequestLoggingFilter(), new ResponseLoggingFilter())
                         //.cookie("logged_in=H7PfQ4P5kSFL9egBAvSP5o8zTau_HsmG; md.sid=s%3AH7PfQ4P5kSFL9egBAvSP5o8zTau_HsmG.5pJA8ci%2BhjpXPwonRQeTgtOc9%2BDcrUKDYmfmr1pm2UA")
                         .get("/customers")
-                      */
+                      */  /*
                 .shouldHave(Conditions.statusCode(200))
                 .shouldHave(Conditions.bodyField("_embedded.customer[0].firstName", not(isEmptyString())))
                 .shouldHave(Conditions.bodyField("_embedded.customer[0].lastName", equalTo("Berger")))
@@ -104,7 +104,7 @@ public class CustomersAPITest extends BaseAPITest {
 //                .then()
 //                .statusCode(200);
     }
-/*   //Этот кусок кода вынесли в внешний сервис
+*//*   //Этот кусок кода вынесли в внешний сервис
     public RequestSpecification setup1(){
         return RestAssured
                 .given()
